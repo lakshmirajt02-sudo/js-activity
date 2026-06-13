@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>head or tails</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+     
+    }
+
+    body {
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #222;
+    }
+
+    .container {
+      text-align: center;
+      background: #333;
+      padding: 40px;
+      border-radius: 15px;
+    }
+
+    h1 {
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    button {
+      width: 140px;
+      height: 50px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      background: gold;
+      font-weight: bold;  
+      transition: transform  ease 0.3s;
+    }
+
+    button:hover {
+      background: orange;
+      transform: translateY(-3px);
+    }
+
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Head or tails</h1>
+      <div class="buttons">
+        <button
+          onclick="
+            let guess = 'head';
+            let res = Math.random() < 0.5 ? 'head' : 'tails';
+
+            guess === res ? alert('you won') : alert('you lose');
+          "
+        >
+          Head
+        </button>
+        <button
+          onclick="
+            let guess = 'tails';
+            let res = Math.random() < 0.5 ? 'head' : 'tails';
+
+            guess === res ? alert('you won') : alert('you lose');
+          "
+        >
+          Tails
+        </button>
+      </div>
+    </div>
+  </body>
+</html>
